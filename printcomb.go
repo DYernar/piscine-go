@@ -10,7 +10,9 @@ func PrintComb() {
 					z01.PrintRune(i)
 					z01.PrintRune(j)
 					z01.PrintRune(k)
-					if (k != '9') && (i != '6') && (j != '7') {
+					if i == 7 && j == 8 && k == 9{
+
+					} else {
 						z01.PrintRune(',')
 						z01.PrintRune(' ')
 					}
