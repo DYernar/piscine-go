@@ -5,7 +5,7 @@ func IsNegative(nb int) rune {
 		return 'F'
 	} else if nb > 0 {
 		return 'T'
-	}else{
+	} else {
 		return 0
 	}
 }
