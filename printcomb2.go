@@ -10,19 +10,19 @@ func PrintComb2() {
 					if i != k && j != l {
 						if i == '0' && j == '0' && k == '0' && l == '1' {
 
-							} else {
-								z01.PrintRune(' ')
-							}
-							z01.PrintRune(i)
-							z01.PrintRune(j)
+						} else {
 							z01.PrintRune(' ')
-							z01.PrintRune(k)
-							z01.PrintRune(l)
-							if i == '9' && j == '8' && k == '9' && l == '9' {
+						}
+						z01.PrintRune(i)
+						z01.PrintRune(j)
+						z01.PrintRune(' ')
+						z01.PrintRune(k)
+						z01.PrintRune(l)
+						if i == '9' && j == '8' && k == '9' && l == '9' {
 		
-							} else {
-								z01.PrintRune(',')
-							}
+						} else {
+							z01.PrintRune(',')
+						}
 					}
 				}
 			}
