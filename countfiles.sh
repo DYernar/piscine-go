@@ -1,1 +1,1 @@
-ls -A | wc -l
+find -name '*' | wc -l
