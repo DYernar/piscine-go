@@ -1,9 +1,11 @@
 package piscine
 
-func IsNegative(nb int) rune {
+import "github.com/01-edu/z01"
+
+func IsNegative(nb int) {
 	if nb < 0 {
-		return 'T'
+		z01.PrintRune('T')
 	} else {
-		return 'F'
+		z01.PrintRune('F')
 	}
 }
