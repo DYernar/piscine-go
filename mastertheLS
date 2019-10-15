@@ -1,1 +1,1 @@
-ls -A -m -c -F --file-type
+ls -A -m -c -F --file-type | sed 's/ //g'
