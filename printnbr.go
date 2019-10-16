@@ -5,9 +5,9 @@ import "github.com/01-edu/z01"
 func PrintNbr(n int) {
 	var strVal string
 	var length int
-	var isnegative bool
+	var isnegative string
 	if n > 0 {
-		isnegative = false
+		isnegative = "f"
 		for i := 0; i <= 18; i++ {
 			if n != 0 {
 				if n%10 == 1 {
@@ -36,7 +36,7 @@ func PrintNbr(n int) {
 			}
 		}
 	} else if n < 0 {
-		isnegative = true
+		isnegative = "t"
 		n = -n
 		for i := 0; i <= 18; i++ {
 			if n != 0 {
@@ -65,11 +65,13 @@ func PrintNbr(n int) {
 				length++
 			}
 		}
+	} else {
+		isnegative = "z"
 	}
-	if isnegative {
+	if isnegative == "t" {
 		strVal = "-" + strVal
 		length++
-	} else if !isnegative {
+	} else if isnegative == "f" {
 
 	} else {
 		strVal = "0"
