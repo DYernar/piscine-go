@@ -6,7 +6,7 @@ func PrintNbr(n int) {
 	var strVal string
 	var length int
 	var isnegative string
-	if n == -9223372036854775807 {
+	if n == -9223372036854775808 {
 		z01.PrintRune('-')
 		z01.PrintRune('9')
 		z01.PrintRune('2')
