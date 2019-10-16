@@ -8,7 +8,7 @@ func PrintNbr(n int) {
 	var isnegative bool
 	if n > 0 {
 		isnegative = false
-		for i := 0; i <= 10; i++ {
+		for i := 0; i <= 18; i++ {
 			if n != 0 {
 				if n%10 == 1 {
 					strVal = "1" + strVal
@@ -36,7 +36,7 @@ func PrintNbr(n int) {
 	} else if n < 0 {
 		isnegative = true
 		n = -n
-		for i := 0; i <= 10; i++ {
+		for i := 0; i <= 18; i++ {
 			if n != 0 {
 				if n%10 == 1 {
 					strVal = "1" + strVal
