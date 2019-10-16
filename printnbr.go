@@ -19,7 +19,7 @@ func PrintNbr(n int) {
 		for i := 0; i <= 10; i++ {
 			if n != 0 {
 				strVal = string((n%10)+48) + strVal
-				n =(n - (n % 10)) / 10
+				n = (n - (n % 10)) / 10
 			}
 		}
 	} else {
