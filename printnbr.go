@@ -54,25 +54,15 @@ func PrintNbr(n int) {
 					strVal = "6" + strVal
 				} else if n%10 == 7 {
 					strVal = "7" + strVal
-		// z01.PrintRune(rune(strVal[j]))
 				} else if n%10 == 8 {
-		// z01.PrintRune(rune(strVal[j]))
 					strVal = "8" + strVal
-		// z01.PrintRune(rune(strVal[j]))
 				} else {
-		// z01.PrintRune(rune(strVal[j]))
 					strVal = "9" + strVal
-		// z01.PrintRune(rune(strVal[j]))
 				}
-		// z01.PrintRune(rune(strVal[j]))
 				n = (n - (n % 10)) / 10
-		// z01.PrintRune(rune(strVal[j]))
 				length++
-		// z01.PrintRune(rune(strVal[j]))
 			}
-		// z01.PrintRune(rune(strVal[j]))
 		}
-		// z01.PrintRune(rune(strVal[j]))
 	}
 	if isnegative {
 		strVal = "-" + strVal
