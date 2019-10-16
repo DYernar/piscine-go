@@ -90,9 +90,10 @@ func PrintNbr(n int) {
 			z01.PrintRune('8')
 		} else if strVal[j] == '9' {
 			z01.PrintRune('9')
+		} else if strVal[j] == '0'{
+			z01.PrintRune('0')
 		} else {
 			z01.PrintRune('-')
 		}
-		// z01.PrintRune(rune(strVal[j]))
 	}
 }
