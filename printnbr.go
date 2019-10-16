@@ -10,21 +10,21 @@ func PrintNbr(n int) {
 		isnegative = false
 		for i := 0; i <= 10; i++ {
 			if n != 0 {
-				if n == 1 {
+				if n%10 == 1 {
 					strVal = "1" + strVal
-				} else if n % 10 == 2 {
+				} else if n%10 == 2 {
 					strVal = "2" + strVal
-				} else if n % 10 == 3 {
+				} else if n%10 == 3 {
 					strVal = "3" + strVal
-				} else if n % 10 == 4  {
+				} else if n%10 == 4  {
 					strVal = "4" + strVal
-				} else if n % 10 == 5 {
+				} else if n%10 == 5 {
 					strVal = "5" + strVal
-				} else if n % 10 == 6 {
+				} else if n%10 == 6 {
 					strVal = "6" + strVal
-				} else if n % 10 == 7 {
+				} else if n%10 == 7 {
 					strVal = "7" + strVal
-				} else if n % 10 == 8 {
+				} else if n%10 == 8 {
 					strVal = "8" + strVal
 				} else {
 					strVal = "9" + strVal
@@ -38,21 +38,21 @@ func PrintNbr(n int) {
 		n = -n
 		for i := 0; i <= 10; i++ {
 			if n != 0 {
-				if n == 1 {
+				if n%10 == 1 {
 					strVal = "1" + strVal
-				} else if n % 10 == 2 {
+				} else if n%10 == 2 {
 					strVal = "2" + strVal
-				} else if n % 10 == 3 {
+				} else if n%10 == 3 {
 					strVal = "3" + strVal
-				} else if n % 10 == 4  {
+				} else if n%10 == 4  {
 					strVal = "4" + strVal
-				} else if n % 10 == 5 {
+				} else if n%10 == 5 {
 					strVal = "5" + strVal
-				} else if n % 10 == 6 {
+				} else if n%10 == 6 {
 					strVal = "6" + strVal
-				} else if n % 10 == 7 {
+				} else if n%10 == 7 {
 					strVal = "7" + strVal
-				} else if n % 10 == 8 {
+				} else if n%10 == 8 {
 					strVal = "8" + strVal
 				} else {
 					strVal = "9" + strVal
