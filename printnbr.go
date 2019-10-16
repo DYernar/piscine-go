@@ -56,6 +56,8 @@ func PrintNbr(n int) {
 					strVal = "7" + strVal
 				} else if n%10 == 8 {
 					strVal = "8" + strVal
+				} else if n%10 == 0 {
+					strVal = "0" + strVal
 				} else {
 					strVal = "9" + strVal
 				}
