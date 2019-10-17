@@ -25,6 +25,8 @@ func BasicAtoi2(s string) int {
 			i = i * 10
 		} else if letter == ' ' {
 			return 0
+		} else {
+			return 0
 		}
 	}
 	return i
