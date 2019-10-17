@@ -1,5 +1,5 @@
 package piscine
 
-func UltimatePointOne(n ***int) {
+func divmod(n ***int) {
 	***n = 1
 }
