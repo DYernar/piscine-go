@@ -2,7 +2,7 @@ package piscine
 
 func Atoi(s string) int {
 	var i int
-	var isnegative bool
+	var isnegative bool = false
 	for _, letter := range s {
 		if letter == '-' {
 			if isnegative || letter != 0 {
