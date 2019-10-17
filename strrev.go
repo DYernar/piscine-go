@@ -6,6 +6,7 @@ func StrRev(s string) string {
 	for range s {
 		i++
 	}
+	i--
 	for ; i >= 0; i-- {
 		strVal += string(s[i])
 	}
