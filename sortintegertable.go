@@ -1,22 +1,12 @@
 package piscine
 
-func SortIntegerTable(table []int) []int {
-	i := 0
-	for range table {
-		i++
-	}
-	for k := 0; k < i; k++ {
-		for j := 0; j < i; j++ {
-			if j != 0 {
-				if table[j-1] > table[j] {
-					temp := table[j-1]
-					table[j-1] = table[j]
-					table[j] = temp
-				} else {
-					break
-				}
+func SortIntegerTable(table []int) {
+	n := len(table)
+	for i := 0; i < n; i++ {
+		for j := i; j < n; j++ {
+			if table[i] > table[j] {
+				Swap(&table[i], &table[j])
 			}
 		}
 	}
-	return table
 }
