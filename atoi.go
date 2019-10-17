@@ -5,7 +5,11 @@ func Atoi(s string) int {
 	var isnegative bool
 	for _, letter := range s {
 		if letter == '-' {
-			isnegative = true
+			if isnegative {
+				return 0
+			} else {
+				isnegative = true
+			}
 		} else if letter == '1' {
 			i = (i * 10) + 1
 		} else if letter == '2' {
