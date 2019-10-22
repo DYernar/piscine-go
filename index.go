@@ -18,10 +18,13 @@ func Index(s string, toFind string) int {
 				if toFind[i] == s[j] {
 					foundIndex = j
 					match++
-					return foundIndex
 				}
 			}
 		}
 	}
-	return -1
+	if match == lengthToFind {
+		return foundIndex
+	} else {
+		return -1
+	}
 }
