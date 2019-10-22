@@ -13,7 +13,7 @@ func Capitalize(s string) string {
 			nextUpper = true
 		}
 
-		if nextUpper {
+		if nextUpper && !(item > 32 && item < 'A') || (item > 'Z' && item < 'a') || (item > 'z' && item < 128) {
 			arr = arr + ToUpper(string(item))
 			nextUpper = false
 		} else {
