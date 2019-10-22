@@ -7,7 +7,11 @@ func Join(strs []string, sep string) string {
 		length++
 	}
 	for i := 0; i < length; i++ {
-		sum = sum + sep + strs[i]
+		if i == 0 {
+			sum = strs[i]
+		} else {
+			sum = sum + sep + strs[i]
+		}
 	}
 
 	return sum
