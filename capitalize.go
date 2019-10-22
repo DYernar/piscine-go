@@ -4,7 +4,7 @@ func Capitalize(s string) string {
 	var arr string
 	var nextUpper bool
 	for index, item := range s {
-		if (item > 47 && item < 58) || (item > 64 && item < 91) || (item > 96 && item < 123) {
+		if (item > 47 && item < 58) || (item > 64 && item < 91) || (item > 96 && item < 123) && nextUpper != true {
 			nextUpper = false
 		} else {
 			nextUpper = true
