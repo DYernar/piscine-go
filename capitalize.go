@@ -2,22 +2,27 @@ package piscine
 
 func Capitalize(s string) string {
 	var arr string
+	var nextUpper bool
 	for index, item := range s {
+		if (item > 32 && item < 'A') || (item > 'Z' && item < 'a') || (item > 'z' && item < 128) {
+			if nextUpper == true {
+				nextUpper = true
+			} else {
+				nextUpper = false
+			}
+		}
 		if index == 0 {
-			if (item < 48) || (item > 57 && item < 65) || (item > 90 && item < 97) || (item > 122) {
-				return s
-			}
-			if item >= 97 && item <= 122 {
-				arr = arr + string(item-32)
-			} else {
-				arr = arr + string(item)
-			}
+			nextUpper = true
+		}
+
+		if nextUpper && !(item > 32 && item < 'A') || (item > 'Z' && item < 'a') || (item > 'z' && item < 128) {
+			arr = arr + ToUpper(string(item))
+			nextUpper = false
 		} else {
-			if item >= 65 && item <= 90 {
-				arr = arr + string(item+32)
-			} else {
-				arr = arr + string(item)
-			}
+			arr = arr + ToLower(string(item))
+		}
+		if item == ' ' || item == '+' || item == '.' || item == ':' || item == ';' {
+			nextUpper = true
 		}
 	}
 	return arr
