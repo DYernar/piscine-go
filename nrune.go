@@ -3,7 +3,7 @@ package piscine
 func NRune(s string, n int) rune {
 	var arr rune
 	for index, item := range s {
-		if index == n+1 {
+		if index == n-1 {
 			arr = item
 		}
 	}
