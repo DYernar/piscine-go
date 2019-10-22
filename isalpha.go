@@ -9,10 +9,10 @@ func IsAlpha(str string) bool {
 		}
 		lengthOfString++
 	}
-	if notAlpha > 0 {
-		return false
-	} else {
+	if notAlpha == lengthOfString {
 		return true
+	} else {
+		return false
 	}
 
 }
