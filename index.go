@@ -3,6 +3,7 @@ package piscine
 func Index(s string, toFind string) int {
 	var length int
 	var lengthToFind int
+	match := 0
 	foundIndex := 0
 	for range toFind {
 		lengthToFind++
@@ -13,9 +14,12 @@ func Index(s string, toFind string) int {
 
 	for i := 0; i < lengthToFind; i++ {
 		for j := 0; j < length; j++ {
-			if toFind[i] == s[j] {
-				foundIndex = j
-				return foundIndex
+			if (i == 0 && match == 0) || (i != 0 && match != 0) {
+				if toFind[i] == s[j] {
+					foundIndex = j
+					match++
+					return foundIndex
+				}
 			}
 		}
 	}
