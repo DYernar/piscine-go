@@ -15,9 +15,9 @@ func Index(s string, toFind string) int {
 		for j := 0; j < length; j++ {
 			if toFind[i] == s[j] {
 				foundIndex = j
+				return foundIndex
 			}
 		}
 	}
-
-	return foundIndex
+	return 0
 }
