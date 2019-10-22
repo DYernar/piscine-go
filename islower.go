@@ -1,6 +1,6 @@
 package piscine
 
-func IsNumeric(str string) bool {
+func IsLower(str string) bool {
 	var lengthOfString int
 	var lowerAmount int
 	for _, item := range str {
