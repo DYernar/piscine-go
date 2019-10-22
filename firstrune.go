@@ -2,6 +2,10 @@ package piscine
 
 func FirstRune(s string) rune {
 	var arr rune
-	arr = rune(s[0])
+	for index, item := range s {
+		if index == 0 {
+			arr = item
+		}
+	}
 	return arr
 }
