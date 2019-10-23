@@ -8,8 +8,12 @@ import (
 
 func main() {
 	args := os.Args
-	for j := 0; j < len(args)-1; j++ {
-		for i := 0; i < len(args)-1; i++ {
+	length := 0
+	for range args {
+		length++
+	}
+	for j := 0; j < length-1; j++ {
+		for i := 0; i < length-1; i++ {
 			if args[i] > args[i+1] {
 				temp := args[i]
 				args[i] = args[i+1]
