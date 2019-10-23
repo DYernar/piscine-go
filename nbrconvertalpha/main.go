@@ -61,7 +61,7 @@ func main() {
 			if val > 0 && val < 27 {
 				newval := rune(Atoi(args[i]))
 				z01.PrintRune(newval + 64)
-			} else if i != 1 {
+			} else {
 				z01.PrintRune(' ')
 			}
 		} else {
