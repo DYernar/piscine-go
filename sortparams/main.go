@@ -21,11 +21,13 @@ func main() {
 			}
 		}
 	}
-	for _, item := range args {
-		for _, itemOfItem := range item {
-			z01.PrintRune(itemOfItem)
+	for index, item := range args {
+		if index != length-1 {
+			for _, itemOfItem := range item {
+				z01.PrintRune(itemOfItem)
+			}
+			z01.PrintRune('\n')
 		}
-		z01.PrintRune('\n')
 	}
 
 }
