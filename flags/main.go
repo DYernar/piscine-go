@@ -93,7 +93,7 @@ func main() {
 			if Index(item, "-i=") >= 0 {
 				containsInsert = true
 				insert = index
-				pointToStart = 4
+				pointToStart = 3
 			} else if Index(item, "--insert=") >= 0 {
 				containsInsert = true
 				insert = index
