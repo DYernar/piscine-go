@@ -91,7 +91,7 @@ func main() {
 	} else {
 
 		for index, item := range arguments {
-			if Index(item, "--i=") >= 0 {
+			if Index(item, "-i=") >= 0 {
 				containsInsert = true
 				insert = index
 				pointToStart = 4
@@ -103,7 +103,7 @@ func main() {
 		}
 
 		for index, item := range arguments {
-			if item == "--o" || item == "--order" {
+			if item == "-o" || item == "--order" {
 				containsOrder = true
 				order = index
 			}
