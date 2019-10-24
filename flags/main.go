@@ -7,6 +7,24 @@ import (
 	"github.com/01-edu/z01"
 )
 
+func StrLen(str string) int {
+	var i int
+	for range str {
+		i++
+	}
+	return i
+}
+
+func FirstRune(s string) rune {
+	var arr rune
+	for index, item := range s {
+		if index == 0 {
+			arr = item
+		}
+	}
+	return arr
+}
+
 func Index(s string, toFind string) int {
 	if StrLen(s) == 0 {
 		return -1
