@@ -1,30 +1,51 @@
 package piscine
 
+import "fmt"
+
 func SplitWhiteSpaces(str string) []string {
-	n := 0
-	pos := 0
-	str = str + " "
-	for i, a := range str {
-		if a == ' ' {
-			tmp := str[pos:i]
-			if tmp != "" {
-				n++
-			}
-			pos = i + 1
+	spaces := 0
+	totalLength := 0
+	for range str {
+		totalLength++
+	}
+	for _, item := range str {
+		if item == ' ' {
+			spaces++
 		}
 	}
-	res := make([]string, n)
-	k := 0
-	ppos := 0
-	for i, a := range str {
-		if a == ' ' {
-			tmp := str[ppos:i]
-			if tmp != "" {
-				res[k] = tmp
-				k++
-			}
-			ppos = i + 1
+	whiteSpaces := make([]int, spaces+2)
+	i := 0
+	for index, item := range str {
+		if index == 0 {
+			whiteSpaces[i] = index
+			i++
+		}
+		if item == ' ' || item == '\n' {
+			whiteSpaces[i] = index
+			i++
 		}
 	}
-	return res
+	whiteSpaces[i] = totalLength
+	lengthOfArray := 0
+	for range whiteSpaces {
+		lengthOfArray++
+	}
+	fmt.Println(str[0])
+	arr := make([]string, spaces+1)
+	for j := 0; j < lengthOfArray-1; j++ {
+		if j == 0 {
+			for k := whiteSpaces[j]; k < whiteSpaces[j+1]; k++ {
+				arr[j] = arr[j] + string(str[k])
+			}
+		} else {
+			if whiteSpaces[j+1]-whiteSpaces[j] != 1 {
+				for k := whiteSpaces[j] + 1; k < whiteSpaces[j+1]; k++ {
+					arr[j] = arr[j] + string(str[k])
+				}
+			}
+		}
+
+	}
+
+	return arr
 }
