@@ -40,7 +40,9 @@ func SplitWhiteSpaces(str string) []string {
 		} else {
 			if whiteSpaces[j+1]-whiteSpaces[j] != 1 {
 				for k := whiteSpaces[j] + 1; k < whiteSpaces[j+1]; k++ {
-					arr[j] = arr[j] + string(str[k])
+					if string(str[k]) != "" {
+						arr[j] = arr[j] + string(str[k])
+					}
 				}
 			}
 		}
