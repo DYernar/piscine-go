@@ -1,48 +1,44 @@
 package piscine
 
 func SplitWhiteSpaces(str string) []string {
-	spaces := 0
-	totalLength := 0
-	for range str {
-		totalLength++
-	}
-	for _, item := range str {
-		if item == ' ' {
-			spaces++
-		}
-	}
-	whiteSpaces := make([]int, spaces+2)
-	i := 0
-	for index, item := range str {
+	bn := 1
+	var invi1 rune
+	for index, w := range str {
 		if index == 0 {
-			whiteSpaces[i] = index
-			i++
+			continue
 		}
-		if item == ' ' || item == '\n' {
-			whiteSpaces[i] = index
-			i++
-		}
-	}
-	whiteSpaces[i] = totalLength
-	lengthOfArray := 0
-	for range whiteSpaces {
-		lengthOfArray++
-	}
-	arr := make([]string, spaces+1)
-	for j := 0; j < lengthOfArray-1; j++ {
-		if j == 0 {
-			for k := whiteSpaces[j]; k < whiteSpaces[j+1]; k++ {
-				arr[j] = arr[j] + string(str[k])
+		if w == ' ' || w == '\t' || w == '\n' {
+			if invi1 != ' ' && invi1 != '\t' && invi1 != '\n' {
+				bn++
 			}
 		} else {
-			if whiteSpaces[j+1]-whiteSpaces[j] != 1 {
-				for k := whiteSpaces[j] + 1; k < whiteSpaces[j+1]; k++ {
-					arr[j] = arr[j] + string(str[k])
-				}
-			}
-		}
 
+		}
+		invi1 = w
 	}
 
-	return arr
+	answer := make([]string, bn)
+	cnt := 0
+	var invi rune
+	for index, w := range str {
+		if index == 0 {
+			if w == ' ' || w == '\t' || w == '\n' {
+				continue
+			}
+		}
+		if w == ' ' || w == '\t' || w == '\n' {
+			if invi != ' ' && invi != '\t' && invi != '\n' {
+				cnt++
+			}
+
+		} else {
+
+			answer[cnt] += string(w)
+
+		}
+		invi = w
+	}
+
+	return answer
+
 }
