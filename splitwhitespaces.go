@@ -20,7 +20,7 @@ func SplitWhiteSpaces(str string) []string {
 			whiteSpaces[i] = index
 			i++
 		}
-		if item == ' ' {
+		if item == ' ' || item == '\n' {
 			whiteSpaces[i] = index
 			i++
 		}
